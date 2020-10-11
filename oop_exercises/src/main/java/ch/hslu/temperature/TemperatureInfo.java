@@ -1,5 +1,11 @@
 package ch.hslu.temperature;
 
+/**
+ * Helper class that provides static methods to print information about any passed in temperature objects.
+ * @author Nicolas Vondru (nicolas.vondru@stud.hslu.ch)
+ * @version 1.0
+ */
+
 public class TemperatureInfo {
 
     public static void printCelsius(Temperature temperature){
