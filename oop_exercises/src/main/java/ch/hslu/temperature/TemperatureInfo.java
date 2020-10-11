@@ -1,4 +1,4 @@
-package ch.hslu;
+package ch.hslu.temperature;
 
 public class TemperatureInfo {
 

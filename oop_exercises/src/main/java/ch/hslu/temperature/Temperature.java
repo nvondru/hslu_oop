@@ -1,4 +1,4 @@
-package ch.hslu;
+package ch.hslu.temperature;
 
 public class Temperature {
     private float kelvin;
@@ -11,7 +11,7 @@ public class Temperature {
     }
 
     public void setKelvin(float kelvin) {
-        if (kelvin >= 0.00f && kelvin <= 500.00f){
+        if (kelvin >= 0.00f && kelvin <= 3000.00f){
             this.kelvin = kelvin;
         }else{
             System.out.println("Temperature not in range! Nothing changed.");
