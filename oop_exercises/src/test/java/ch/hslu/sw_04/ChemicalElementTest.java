@@ -1,4 +1,4 @@
-package ch.hslu.temperature;
+package ch.hslu.sw_04;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

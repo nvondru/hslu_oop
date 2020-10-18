@@ -1,4 +1,4 @@
-package ch.hslu.vehicle;
+package ch.hslu.sw_05.switchable;
 
 public class Light implements Switchable {
 

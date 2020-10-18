@@ -1,4 +1,4 @@
-package ch.hslu.shape;
+package ch.hslu.sw_05.shape;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

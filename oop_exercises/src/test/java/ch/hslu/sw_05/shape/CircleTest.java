@@ -1,5 +1,6 @@
-package ch.hslu.shape;
+package ch.hslu.sw_05.shape;
 
+import ch.hslu.sw_05.shape.Circle;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 

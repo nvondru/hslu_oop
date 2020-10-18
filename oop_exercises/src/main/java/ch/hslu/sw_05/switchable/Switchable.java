@@ -1,4 +1,4 @@
-package ch.hslu.vehicle;
+package ch.hslu.sw_05.switchable;
 
 /**
  * Interface which enforces methods to switch a state between "on" and "off".

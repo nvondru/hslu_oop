@@ -1,4 +1,4 @@
-package ch.hslu.vehicle;
+package ch.hslu.sw_04.vehicle;
 
 public class Vehicle implements Switchable{
     private Light[] lights = new Light [2];

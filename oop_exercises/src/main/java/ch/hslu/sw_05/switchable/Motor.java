@@ -1,4 +1,4 @@
-package ch.hslu.vehicle;
+package ch.hslu.sw_05.switchable;
 
 public class Motor implements Switchable {
 

@@ -1,4 +1,4 @@
-package ch.hslu.temperature;
+package ch.hslu.sw_05.chemicalElement;
 
 /**
  * A simple class that holds information about the current temperature value.

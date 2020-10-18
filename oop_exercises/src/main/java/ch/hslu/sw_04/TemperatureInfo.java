@@ -1,4 +1,4 @@
-package ch.hslu.temperature;
+package ch.hslu.sw_04;
 
 /**
  * Helper class that provides static methods to print information about any passed in temperature objects.

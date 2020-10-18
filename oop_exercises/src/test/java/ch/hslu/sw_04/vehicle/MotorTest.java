@@ -1,4 +1,4 @@
-package ch.hslu.vehicle;
+package ch.hslu.sw_04.vehicle;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
