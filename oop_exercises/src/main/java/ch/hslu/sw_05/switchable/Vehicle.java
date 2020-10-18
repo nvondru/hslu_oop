@@ -59,6 +59,7 @@ public class Vehicle implements CountingSwitchable {
         return this.switchCounter;
     }
 
+    // ein Interface kann keine statischen Methoden definieren, ohne gleichzeitig deren Implementation zu definieren, richtig?
     public static int GET_SWITCH_COUNTER(){
         return SWITCH_COUNTER;
     }
