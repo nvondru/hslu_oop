@@ -13,23 +13,22 @@ public class ChemicalElement implements Named {
 
     private final String nameIdent;
     private final Temperature temperature;
-    private final float boilingPoint_kelvin;
-    private final float bubblingPoint_kelvin;
+    private final Temperature boilingPoint;
+    private final Temperature bubblingPoint;
     private String name;
     /**
      *
      * @param nameIdent Abbreviation of the elements name (eg. PB for "Lead").
      * @param temperature Temperature object for this element (eg. temperature.kelvin = 273.15K).
-     * @param boilingPoint_kelvin Defines the temperature (in kelvin) needed, so that the element changes between solid and fluid state.
-     * @param bubblingPoint_kelvin Defines the temperature (in kelvin) needed, so that the element changes between fluid and gaseous state.
+     * @param boilingPoint Defines the temperature needed, so that the element changes between solid and fluid state.
+     * @param bubblingPoint Defines the temperature needed, so that the element changes between fluid and gaseous state.
      */
-    public ChemicalElement(String nameIdent, Temperature temperature, float boilingPoint_kelvin, float bubblingPoint_kelvin) {
+    public ChemicalElement(String nameIdent, Temperature temperature, Temperature boilingPoint, Temperature bubblingPoint) {
         this.nameIdent = nameIdent;
         this.temperature = temperature;
-        this.boilingPoint_kelvin = boilingPoint_kelvin;
-        this.bubblingPoint_kelvin = bubblingPoint_kelvin;
+        this.boilingPoint = boilingPoint;
+        this.bubblingPoint = bubblingPoint;
     }
-
     /**
      *
      * @return Name of the element (eg. PB)
@@ -53,9 +52,9 @@ public class ChemicalElement implements Named {
      * @return Current aggregation state (solid, liquid or gaseous)
      */
     public String getAggregationState(){
-        if (this.temperature.getKelvin() < this.boilingPoint_kelvin){
+        if (this.temperature.getKelvin() < this.boilingPoint.getKelvin()){
             return "solid";
-        }else if(this.temperature.getKelvin() < this.bubblingPoint_kelvin){
+        }else if(this.temperature.getKelvin() < this.bubblingPoint.getKelvin()){
             return "liquid";
         }else{
             return "gaseous";

@@ -4,14 +4,13 @@ public class Vehicle implements CountingSwitchable {
     private Light[] lights = new Light[2];
     private Motor motor;
     private int switchCounter;
-    private static int SWITCH_COUNTER;
+    private static int SWITCH_COUNTER = 0;
 
     public Vehicle() {
         this.lights[0] = new Light(false);
         this.lights[1] = new Light(false);
         this.motor = new Motor(false);
         this.switchCounter = 0;
-        SWITCH_COUNTER = 0;
     }
 
     @Override
@@ -59,7 +58,6 @@ public class Vehicle implements CountingSwitchable {
         return this.switchCounter;
     }
 
-    // ein Interface kann keine statischen Methoden definieren, ohne gleichzeitig deren Implementation zu definieren, richtig?
     public static int GET_SWITCH_COUNTER(){
         return SWITCH_COUNTER;
     }

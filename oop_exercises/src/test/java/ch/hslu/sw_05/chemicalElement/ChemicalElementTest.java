@@ -10,7 +10,7 @@ class ChemicalElementTest {
 
     @Test
     public void checkObjectInstantiation(){
-        ChemicalElement oxygen = new ChemicalElement("O", new Temperature(ROOM_TEMPERATURE), 54.8f, 90.15f);
+        ChemicalElement oxygen = new ChemicalElement("O", new Temperature(ROOM_TEMPERATURE), new Temperature(54.8f), new Temperature(90.15f));
         ChemicalElement mercury = new Mercury(new Temperature(ROOM_TEMPERATURE));
         ChemicalElement nitrogen = new Nitrogen(new Temperature(ROOM_TEMPERATURE));
         ChemicalElement lead = new Lead(new Temperature(ROOM_TEMPERATURE));

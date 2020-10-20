@@ -12,21 +12,12 @@ public class Square extends Rectangle {
         super(x, y, side);
     }
 
+    @Override
+    public void changeDimensions(double width, double height){
+        throw new UnsupportedOperationException("Calling this method is not allowed, beacuse it's overriden.");
+    }
+
     public void changeDimensions(double side) {
         super.changeDimensions(side, side);
-    }
-
-    @Override
-    public double getPerimeter() {
-        //for a square each side is equal in length to either width or height
-        double side = this.getWidth();
-        return 4 * side;
-    }
-
-    @Override
-    public double getArea() {
-        //for a square each side is equal in length to either width or height
-        double side = this.getWidth();
-        return Math.pow(side, 2);
     }
 }
