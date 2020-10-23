@@ -1,10 +1,13 @@
 package ch.hslu.sw_05.switchable;
 
-public class Vehicle implements CountingSwitchable {
+import ch.hslu.sw_05.named.Named;
+
+public class Vehicle implements CountingSwitchable, Named {
     private Light[] lights = new Light[2];
     private Motor motor;
     private int switchCounter;
     private static int SWITCH_COUNTER = 0;
+    private String name;
 
     public Vehicle() {
         this.lights[0] = new Light(false);
@@ -56,6 +59,16 @@ public class Vehicle implements CountingSwitchable {
     @Override
     public long getSwitchCount() {
         return this.switchCounter;
+    }
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public void setName(String name) {
+        this.name = name;
     }
 
     public static int GET_SWITCH_COUNTER(){

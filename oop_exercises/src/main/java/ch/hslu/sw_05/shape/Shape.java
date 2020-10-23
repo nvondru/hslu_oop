@@ -1,5 +1,7 @@
 package ch.hslu.sw_05.shape;
 
+import ch.hslu.sw_05.named.Named;
+
 /**
  * An abstract shape class that implements generalized logic for shape objects, such as Circle or Rectangle.
  * @author Nicolas Vondru (nicolas.vondru@stud.hslu.ch)
@@ -7,9 +9,10 @@ package ch.hslu.sw_05.shape;
  * @since 13.10.2020
  */
 
-public abstract class Shape {
+public abstract class Shape implements Named {
     private int x;
     private int y;
+    private String name;
 
     /**
      * Initializes any shape object with an initial x and y coordinate.
@@ -37,6 +40,16 @@ public abstract class Shape {
 
     public int getY() {
         return y;
+    }
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public void setName(String name) {
+        this.name = name;
     }
 
     /**
