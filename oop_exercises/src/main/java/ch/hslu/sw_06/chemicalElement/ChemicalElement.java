@@ -6,8 +6,8 @@ import ch.hslu.sw_05.named.Named;
  * A simple class that holds information about a chemical element and its temperature.
  * Provides methods to check the current aggregation state of the element.
  * @author Nicolas Vondru (nicolas.vondru@stud.hslu.ch)
- * @version 2.0
- * @since 18.10.2020
+ * @version 3.0
+ * @since 23.10.2020
  */
 public class ChemicalElement implements Named {
 
@@ -73,6 +73,6 @@ public class ChemicalElement implements Named {
 
     @Override
     public String toString(){
-        return this.getClass().getName() + "[nameIdent: " + this.getNameIdent() + "]";
+        return this.getClass().getName() + "[nameIdent: " + this.getNameIdent() + "; temperatureKelvin: " + this.getTemperature().getKelvin() + "]";
     }
 }
