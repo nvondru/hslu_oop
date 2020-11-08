@@ -1,15 +1,16 @@
-package ch.hslu.sw_06.chemicalElement;
+package ch.hslu.sw_07.chemicalElement;
+
+import java.util.Objects;
 
 /**
  * A simple class that holds information about the current temperature value.
  * Provides methods to access this value in different units.
  * @author Nicolas Vondru (nicolas.vondru@stud.hslu.ch)
- * @version 1.0
+ * @version 2.0
  */
 
-public class Temperature {
+public class Temperature implements Comparable<Temperature>{
     private float kelvin;
-
 
     /**
      * @param kelvin The initial temperature value in kelvin.
@@ -57,7 +58,27 @@ public class Temperature {
         this.setKelvin(this.getKelvin() + kelvin);
     }
 
+    @Override
+    public final boolean equals(Object object){
+        if (object == this){
+            return true;
+        }
+        if (!(object instanceof Temperature)){
+            return false;
+        }
+        Temperature other = (Temperature) object;
+//        use Float.compare() when comparing floats!
+        return Float.compare(other.kelvin, this.kelvin) == 0;
+    }
+
+    @Override
+    public final int hashCode(){
+        return Objects.hash(this.kelvin);
+    }
 
 
-
+    @Override
+    public int compareTo(Temperature other) {
+        return Float.compare(this.kelvin, other.kelvin);
+    }
 }
