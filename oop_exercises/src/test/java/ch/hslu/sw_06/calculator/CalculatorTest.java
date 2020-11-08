@@ -8,6 +8,7 @@ class CalculatorTest {
 
     private Calculator calculator;
 
+    // testing different JUnit Annotations
     @BeforeAll
     static void init(){
         System.out.println("Initializing test run!");
@@ -28,6 +29,9 @@ class CalculatorTest {
     void afterEach(){
         System.out.println("... test ended!");
     }
+
+
+
     @Test
     void checkAdditionWithPositiveValues(){
         int result = calculator.sumUp(10, 20);
@@ -59,6 +63,7 @@ class CalculatorTest {
            calculator.sumUp(1, Integer.MAX_VALUE);
         });
     }
+    
 
 
 

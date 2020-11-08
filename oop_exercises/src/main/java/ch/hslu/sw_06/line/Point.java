@@ -44,8 +44,7 @@ public class Point {
     }
 
     public void moveRelative(Point point){
-        this.x += point.getX();
-        this.y += point.getY();
+        this.moveRelative(point.getX(), point.getY());
     }
 
     // Although this function could technically be used to calculate new x and y coordinates, it's not recommended to declare it.

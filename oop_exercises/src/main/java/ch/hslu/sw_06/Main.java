@@ -40,6 +40,7 @@ public class Main {
         //Vehicle vehicle = new Vehicle();
         //vehicle.setName("SuperDuperVehicle");
         //
+        // // Object from classes which implement the 'Named' interface can ce stored in variables of type 'Named'
         //Named[] namedElements = new Named[3];
         //namedElements[0] = circle;
         //namedElements[1] = chemicalElement;
@@ -58,8 +59,6 @@ public class Main {
 
         System.out.println(chemicalElement.toString());
         System.out.println(mercury.toString());
-
-
 
     }
 }
