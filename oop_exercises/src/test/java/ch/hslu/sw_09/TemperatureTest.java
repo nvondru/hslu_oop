@@ -82,4 +82,22 @@ class TemperatureTest {
             new Temperature(-100, TemperatureEnums.KELVIN);
         });
     }
+
+    @Test
+    public void checkIfLegalArgumentDoesNotThrowError(){
+        Assertions.assertDoesNotThrow(() -> {
+            new Temperature(100, TemperatureEnums.KELVIN);
+        });
+    }
+
+    @Test
+    public void checkFactoryMethods(){
+        Temperature tempKelvin = Temperature.createFromKelvin(100);
+        Temperature tempCelsius = Temperature.createFromCelsius(100);
+        Temperature tempFahrenheit = Temperature.createFromFahrenheit(100);
+
+        assertEquals(100, tempKelvin.getKelvin(), 0.1);
+        assertEquals(100, tempCelsius.getCelsius(), 0.1);
+        assertEquals(100, tempFahrenheit.getFahrenheit(), 0.1);
+    }
 }

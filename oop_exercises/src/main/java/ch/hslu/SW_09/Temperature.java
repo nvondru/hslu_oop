@@ -14,7 +14,19 @@ public final class Temperature implements Comparable<Temperature>{
     private final float kelvin;
 
     /**
+     * @param kelvin The initial temperature value in kelvin.
+     */
+    private Temperature(final float kelvin){
+        if (kelvin >= 0.00f){
+            this.kelvin = kelvin;
+        }else{
+            throw new IllegalArgumentException("The passed argument remapped to " + kelvin + " kelvin is physically incorrect!");
+        }
+    }
+
+    /**
      * @param value The initial temperature value in kelvin.
+     * @param type The scale type which should be used while storing the temperature value. (KELVIN, CELSIUS, FAHRENHEIT)
      */
     public Temperature(final float value, final TemperatureEnums type) {
         float tempKelvin = 0f;
@@ -32,6 +44,18 @@ public final class Temperature implements Comparable<Temperature>{
         }else{
             throw new IllegalArgumentException("The passed argument " + value + " " + type + " is physically incorrect!");
         }
+    }
+
+    public static Temperature createFromKelvin(final float kelvin){
+        return new Temperature(kelvin);
+    }
+
+    public static Temperature createFromCelsius(final float celsius){
+        return new Temperature(convertCelsiusToKelvin(celsius));
+    }
+
+    public static Temperature createFromFahrenheit(final float fahrenheit){
+        return new Temperature(convertFahrenheitToKelvin(fahrenheit));
     }
 
     /**
