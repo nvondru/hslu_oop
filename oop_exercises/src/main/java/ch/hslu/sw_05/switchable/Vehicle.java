@@ -16,6 +16,7 @@ public class Vehicle implements CountingSwitchable, Named {
         this.switchCounter = 0;
     }
 
+
     @Override
     public void switchOn() {
         if (this.isSwitchedOff()){

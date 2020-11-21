@@ -10,6 +10,7 @@ public class Motor implements Switchable {
     private SwitchState switchState = SwitchState.OFF;
     private List<PropertyChangeListener> changeListeners = new ArrayList<>();
 
+
     public Motor(SwitchState switchState) {
         this.switchState = switchState;
     }

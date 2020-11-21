@@ -1,7 +1,7 @@
-package ch.hslu.sw_10;
+package ch.hslu.sw_10.temperature;
 
 import ch.hslu.sw_10.temperature.Temperature;
-import ch.hslu.sw_10.temperature.TemperatureEnums;
+import ch.hslu.sw_10.temperature.TemperatureScales;
 import nl.jqno.equalsverifier.EqualsVerifier;
 import nl.jqno.equalsverifier.Warning;
 import org.junit.jupiter.api.Assertions;
@@ -15,7 +15,7 @@ class TemperatureTest {
 
     @BeforeEach
     public void setupTemperature(){
-        this.temperature = new Temperature(273.15f, TemperatureEnums.KELVIN);
+        this.temperature = new Temperature(273.15f, TemperatureScales.KELVIN);
     }
 
 
@@ -32,31 +32,31 @@ class TemperatureTest {
 
     @Test
     public void checkTemperatureEquality(){
-        Temperature other = new Temperature(temperature.getKelvin(), TemperatureEnums.KELVIN);
+        Temperature other = new Temperature(temperature.getKelvin(), TemperatureScales.KELVIN);
         assertEquals(other, temperature);
     }
 
     @Test
     public void checkTemperatureHashCodes(){
-        Temperature other = new Temperature(temperature.getKelvin(), TemperatureEnums.KELVIN);
+        Temperature other = new Temperature(temperature.getKelvin(), TemperatureScales.KELVIN);
         assertEquals(other.hashCode(), temperature.hashCode());
     }
 
     @Test
     public void checkOtherSmallerThanTemperature(){
-        Temperature other = new Temperature(temperature.getKelvin() - 10f, TemperatureEnums.KELVIN);
+        Temperature other = new Temperature(temperature.getKelvin() - 10f, TemperatureScales.KELVIN);
         assertEquals(-1, other.compareTo(temperature));
     }
 
     @Test
     public void checkOtherEqualsRankOfTemperature(){
-        Temperature other = new Temperature(temperature.getKelvin(), TemperatureEnums.KELVIN);
+        Temperature other = new Temperature(temperature.getKelvin(), TemperatureScales.KELVIN);
         assertEquals(0, other.compareTo(temperature));
     }
 
     @Test
     public void checkOtherGreaterThanTemperature(){
-        Temperature other = new Temperature(temperature.getKelvin() + 10f, TemperatureEnums.KELVIN);
+        Temperature other = new Temperature(temperature.getKelvin() + 10f, TemperatureScales.KELVIN);
         assertEquals(1, other.compareTo(temperature));
     }
 
@@ -78,14 +78,14 @@ class TemperatureTest {
     @Test
     public void checkIfIllegalArgumentThrowsError(){
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
-            new Temperature(-100, TemperatureEnums.KELVIN);
+            new Temperature(-100, TemperatureScales.KELVIN);
         });
     }
 
     @Test
     public void checkIfLegalArgumentDoesNotThrowError(){
         Assertions.assertDoesNotThrow(() -> {
-            new Temperature(100, TemperatureEnums.KELVIN);
+            new Temperature(100, TemperatureScales.KELVIN);
         });
     }
 

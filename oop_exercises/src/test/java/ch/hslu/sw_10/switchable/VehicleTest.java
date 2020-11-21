@@ -74,20 +74,21 @@ class VehicleTest {
         }
     }
 
-    // can this even be tested? doesn't affect state directly, only calls handlers
     @Test
     public void checkManuallyFiredSwitchNotification(){
         PropertyChangeEvent event = new PropertyChangeEvent(vehicle.getMotor(), "switchState", SwitchState.OFF, SwitchState.ON);
-        vehicle.propertyChange(event);
-        // i added Vehicle.getLastNotification() just for testing
+        vehicle.getMotor().firePropertyChangeEvent(event);
+        // i added Vehicle.getLastNotification() just for testing -> we should not implement/modify logic just for testing?!?
         assertEquals(event.toString(), vehicle.getLastNotification());
-
     }
 
     @Test
     public void checkAutomaticallyFiredSwitchNotification(){
         vehicle.switchOn();
 //        ?!
+        // can this even be tested? i have no access to original event object
+//        what should be asserted?
+
     }
 
     // How do I test static methods that access static fields???

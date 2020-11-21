@@ -1,7 +1,5 @@
 package ch.hslu.sw_10.temperature;
 
-import ch.hslu.sw_10.temperature.TemperatureEnums;
-
 import java.util.Objects;
 
 /**
@@ -30,14 +28,14 @@ public final class Temperature implements Comparable<Temperature>{
      * @param value The initial temperature value in kelvin.
      * @param type The scale type which should be used while storing the temperature value. (KELVIN, CELSIUS, FAHRENHEIT)
      */
-    public Temperature(final float value, final TemperatureEnums type) {
+    public Temperature(final float value, final TemperatureScales type) {
         float tempKelvin = 0f;
 
-        if (type.equals(TemperatureEnums.KELVIN)){
+        if (type.equals(TemperatureScales.KELVIN)){
             tempKelvin = value;
-        }else if (type.equals(TemperatureEnums.CELSIUS)){
+        }else if (type.equals(TemperatureScales.CELSIUS)){
             tempKelvin = convertCelsiusToKelvin(value);
-        }else if(type.equals(TemperatureEnums.FAHRENHEIT)){
+        }else if(type.equals(TemperatureScales.FAHRENHEIT)){
             tempKelvin = convertFahrenheitToKelvin(value);
         }
 
@@ -123,6 +121,6 @@ public final class Temperature implements Comparable<Temperature>{
 
     @Override
     public String toString(){
-        return this.getClass().getName() + "[kelvin=" + this.kelvin + ";celsius=" + this.getCelsius() + ";fahrenheit=" + this.getFahrenheit() + "]";
+        return "Temperature[kelvin=" + this.kelvin + ";celsius=" + this.getCelsius() + ";fahrenheit=" + this.getFahrenheit() + "]";
     }
 }
