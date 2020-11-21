@@ -50,12 +50,19 @@ public class TemperatureHistory {
     }
 
     public Temperature getMax(){
-            return Collections.max(history);
+        if (this.maxTemperature == null){
+            throw new NullPointerException("The max temperature is not set.");
+        }else{
+            return this.maxTemperature;
+        }
     }
 
     public Temperature getMin(){
-        return Collections.min(history);
-
+        if (this.minTemperature == null){
+            throw new NullPointerException("The min temperature is not set.");
+        }else{
+            return this.minTemperature;
+        }
     }
 
     public Temperature getAverage(){

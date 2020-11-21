@@ -87,7 +87,7 @@ class TemperatureHistoryTest {
 
     @Test
     public void checkGetMaxThrowsErrorWhenListEmpty(){
-        NoSuchElementException ex = assertThrows(NoSuchElementException.class, () -> {
+        NullPointerException ex = assertThrows(NullPointerException.class, () -> {
            history.getMax();
         });
         System.out.println("Thrown exception as expected: " + ex.getMessage());
@@ -96,7 +96,7 @@ class TemperatureHistoryTest {
 
     @Test
     public void checkGetMinThrowsErrorWhenListEmpty(){
-        NoSuchElementException ex = assertThrows(NoSuchElementException.class, () -> {
+        NullPointerException ex = assertThrows(NullPointerException.class, () -> {
             history.getMin();
         });
         System.out.println("Thrown exception as expected: " + ex.getMessage());
