@@ -25,14 +25,11 @@ public class Main {
                         type = scanner2.next();
                         Temperature temperature = null;
                         if (type.equals("1")) {
-//                            temperature = new Temperature(value, TemperatureEnums.KELVIN);
-                            temperature = Temperature.createFromKelvin(value);
+                            temperature = new Temperature(value, TemperatureEnums.KELVIN);
                         } else if (type.equals("2")) {
-//                            temperature = new Temperature(value, TemperatureEnums.CELSIUS);
-                            temperature = Temperature.createFromCelsius(value);
+                            temperature = new Temperature(value, TemperatureEnums.CELSIUS);
                         } else if (type.equals("3")) {
-//                            temperature = new Temperature(value, TemperatureEnums.FAHRENHEIT);
-                            temperature = Temperature.createFromFahrenheit(value);
+                            temperature = new Temperature(value, TemperatureEnums.FAHRENHEIT);
                         } else {
                             System.out.println("Ungültige Eingabe '" + type + "'. Bitte korrigieren Sie Ihre Eingabe!");
                         }

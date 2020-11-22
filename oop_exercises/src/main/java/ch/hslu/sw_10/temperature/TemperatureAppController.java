@@ -34,6 +34,7 @@ public class TemperatureAppController {
     public TemperatureAppController(){
         this.temperatureHistory = new TemperatureHistory();
 //        this.temperatureHistory.addRemperatureMinMaxListener(new TemperatureHistoryListener());
+
         this.temperatureHistory.addRemperatureMinMaxListener(new TemperatureMinMaxListener() {
             @Override
             public void temperatureMinMaxChange(TemperatureMinMaxEvent event) {
