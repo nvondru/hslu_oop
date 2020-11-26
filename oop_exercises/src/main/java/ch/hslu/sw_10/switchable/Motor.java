@@ -9,6 +9,7 @@ public class Motor implements Switchable {
 
     private SwitchState switchState = SwitchState.OFF;
     private List<PropertyChangeListener> changeListeners = new ArrayList<>();
+    private PropertyChangeEvent lastSentEvent;
 
 
     public Motor(SwitchState switchState) {
@@ -19,6 +20,7 @@ public class Motor implements Switchable {
         if (listener != null){
             this.changeListeners.add(listener);
         }
+        //error handling
     }
 
     public void removePropertyChangeListener(final PropertyChangeListener listener){
@@ -27,9 +29,10 @@ public class Motor implements Switchable {
         }
     }
 
-    public void firePropertyChangeEvent(PropertyChangeEvent event){
+    void firePropertyChangeEvent(PropertyChangeEvent event){
         for (PropertyChangeListener listener : this.changeListeners){
             listener.propertyChange(event);
+            this.lastSentEvent = event;
         }
     }
 
@@ -69,4 +72,5 @@ public class Motor implements Switchable {
     public boolean isSwitchedOff() {
         return this.switchState.equals(SwitchState.ON) ? false : true;
     }
+    
 }
