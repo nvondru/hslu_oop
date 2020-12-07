@@ -14,7 +14,7 @@ public class Vehicle implements CountingSwitchable, Named, PropertyChangeListene
     private static int SWITCH_COUNTER = 0;
     private String name;
     private static final Logger LOG = LogManager.getLogger(Vehicle.class);
-    private String lastNotification;
+    private PropertyChangeEvent lastEvent;
 
     public Vehicle() {
         this.lights[0] = new Light(SwitchState.OFF);
@@ -100,11 +100,11 @@ public class Vehicle implements CountingSwitchable, Named, PropertyChangeListene
 
     private void handle_MotorEvent(PropertyChangeEvent event){
         LOG.info(event.toString());
-        this.lastNotification = event.toString();
+        this.lastEvent = event;
     }
 
-    public String getLastNotification() {
-        return lastNotification;
+    public PropertyChangeEvent getLastEvent() {
+        return this.lastEvent;
     }
 
     public Motor getMotor() {

@@ -12,30 +12,30 @@ public class TemperatureAppController {
     private final Scanner scanner = new Scanner(System.in);
     private final TemperatureHistory temperatureHistory;
 
-    private class TemperatureHistoryListener implements TemperatureMinMaxListener{
-        @Override
-        public void temperatureMinMaxChange(TemperatureMinMaxEvent event) {
-            if (event.getEventType().equals(TemperatureEvents.MAX)){
-                handle_temperatureMaxChanged(event);
-            }else if(event.getEventType().equals(TemperatureEvents.MIN)){
-                handle_temperatureMinChanged(event);
-            }
-        }
-
-        private void handle_temperatureMaxChanged(TemperatureMinMaxEvent event) {
-            LOG.info("The maximum temperature in the current TemperatureHistory has changed from " + event.getOldValue() + " to " + event.getNewValue());
-        }
-
-        private void handle_temperatureMinChanged(TemperatureMinMaxEvent event) {
-            LOG.info("The minimum temperature in the current TemperatureHistory has changed from " + event.getOldValue() + " to " + event.getNewValue());
-        }
-    }
+    //private class TemperatureHistoryListener implements TemperatureMinMaxListener{
+    //    @Override
+    //    public void temperatureMinMaxChange(TemperatureMinMaxEvent event) {
+    //        if (event.getEventType().equals(TemperatureEvents.MAX)){
+    //            handle_temperatureMaxChanged(event);
+    //        }else if(event.getEventType().equals(TemperatureEvents.MIN)){
+    //            handle_temperatureMinChanged(event);
+    //        }
+    //    }
+    //
+    //    private void handle_temperatureMaxChanged(TemperatureMinMaxEvent event) {
+    //        LOG.info("The maximum temperature in the current TemperatureHistory has changed from " + event.getOldValue() + " to " + event.getNewValue());
+    //    }
+    //
+    //    private void handle_temperatureMinChanged(TemperatureMinMaxEvent event) {
+    //        LOG.info("The minimum temperature in the current TemperatureHistory has changed from " + event.getOldValue() + " to " + event.getNewValue());
+    //    }
+    //}
 
     public TemperatureAppController(){
         this.temperatureHistory = new TemperatureHistory();
-//        this.temperatureHistory.addRemperatureMinMaxListener(new TemperatureHistoryListener());
+//        this.temperatureHistory.addTemperatureMinMaxListener(new TemperatureHistoryListener());
 
-        this.temperatureHistory.addRemperatureMinMaxListener(new TemperatureMinMaxListener() {
+        this.temperatureHistory.addTemperatureMinMaxListener(new TemperatureMinMaxListener() {
             @Override
             public void temperatureMinMaxChange(TemperatureMinMaxEvent event) {
                 if (event.getEventType().equals(TemperatureEvents.MAX)){
@@ -52,6 +52,7 @@ public class TemperatureAppController {
                 LOG.info("The minimum temperature in the current TemperatureHistory has changed from " + event.getOldValue() + " to " + event.getNewValue());
             }
         });
+
     }
 
     public void startApp(){

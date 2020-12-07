@@ -72,5 +72,8 @@ public class Motor implements Switchable {
     public boolean isSwitchedOff() {
         return this.switchState.equals(SwitchState.ON) ? false : true;
     }
-    
+
+    public PropertyChangeEvent getLastSentEvent() {
+        return lastSentEvent;
+    }
 }

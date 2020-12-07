@@ -90,7 +90,7 @@ public class TemperatureHistory {
         return output;
     }
 
-    public void addRemperatureMinMaxListener(TemperatureMinMaxListener listener){
+    public void addTemperatureMinMaxListener(TemperatureMinMaxListener listener){
         if (listener != null){
             this.listeners.add(listener);
         }
@@ -102,7 +102,7 @@ public class TemperatureHistory {
         }
     }
 
-    public void fireTemperatureMinMaxEvent(TemperatureMinMaxEvent event){
+    private void fireTemperatureMinMaxEvent(TemperatureMinMaxEvent event){
         for (TemperatureMinMaxListener listener : this.listeners){
             listener.temperatureMinMaxChange(event);
         }

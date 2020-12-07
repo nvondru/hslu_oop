@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7447901d-c960-47f9-816d-e5ab0caabe8f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/oop_exercises/src/main/java/ch/hslu/sw_10/switchable/Motor.java" beforeDir="false" afterPath="$PROJECT_DIR$/oop_exercises/src/main/java/ch/hslu/sw_10/switchable/Motor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oop_exercises/src/main/java/ch/hslu/sw_10/switchable/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/oop_exercises/src/main/java/ch/hslu/sw_10/switchable/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oop_exercises/src/main/java/ch/hslu/sw_10/temperature/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/oop_exercises/src/main/java/ch/hslu/sw_10/temperature/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oop_exercises/src/main/java/ch/hslu/sw_10/temperature/TemperatureAppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/oop_exercises/src/main/java/ch/hslu/sw_10/temperature/TemperatureAppController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oop_exercises/src/main/java/ch/hslu/sw_10/temperature/TemperatureHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/oop_exercises/src/main/java/ch/hslu/sw_10/temperature/TemperatureHistory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oop_exercises/src/main/java/ch/hslu/sw_10/temperature/TemperatureMinMaxListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/oop_exercises/src/main/java/ch/hslu/sw_10/temperature/TemperatureMinMaxListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oop_exercises/src/test/java/ch/hslu/sw_10/switchable/VehicleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/oop_exercises/src/test/java/ch/hslu/sw_10/switchable/VehicleTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.3\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1koP4X1mjniaZAp4rHjKOQX48S0" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7447901d-c960-47f9-816d-e5ab0caabe8f" name="Default Changelist" comment="" />
+      <created>1606363779980</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606363779980</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="454" y="248" width="700" height="530" key="recent.locations.popup" timestamp="1606363804344">
+      <screen x="0" y="0" width="1620" height="1040" />
+    </state>
+    <state x="454" y="248" width="700" height="530" key="recent.locations.popup/0.0.1620.1040@0.0.1620.1040" timestamp="1606363804344" />
+    <state x="473" y="226" width="672" height="678" key="search.everywhere.popup" timestamp="1607334790041">
+      <screen x="0" y="0" width="1620" height="1040" />
+    </state>
+    <state x="473" y="226" width="672" height="678" key="search.everywhere.popup/0.0.1620.1040@0.0.1620.1040" timestamp="1607334790041" />
+  </component>
+</project>

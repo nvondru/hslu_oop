@@ -6,5 +6,4 @@ package ch.hslu.sw_10.temperature;
  */
 public interface TemperatureMinMaxListener {
     public abstract void temperatureMinMaxChange(TemperatureMinMaxEvent event);
-
 }
