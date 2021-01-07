@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"ch.hslu.temperature","l":"ChemicalElement"},{"p":"ch.hslu.temperature","l":"ChemicalElementTest"},{"p":"ch.hslu.temperature","l":"Main"},{"p":"ch.hslu.temperature","l":"Temperature"},{"p":"ch.hslu.temperature","l":"TemperatureInfo"},{"p":"ch.hslu.temperature","l":"TemperatureTest"}]
