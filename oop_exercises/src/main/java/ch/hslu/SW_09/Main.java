@@ -19,7 +19,7 @@ public class Main {
                 Scanner scanner2 = new Scanner(System.in);
                 if (!input.equals("exit")) {
                     float value = Float.valueOf(input);
-                    System.out.println("Eigegebener Wert: " + value);
+                    System.out.println("Eingegebener Wert: " + value);
                     do {
                         System.out.println("Soll der Wert als kelvin (1), celsius (2) oder fahrenheit (3) gepseichert werden?");
                         type = scanner2.next();
